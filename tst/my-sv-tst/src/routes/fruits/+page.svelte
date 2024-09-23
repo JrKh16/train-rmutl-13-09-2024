@@ -4,6 +4,7 @@
     // ตัวแปรของ fruits
     let selectedId=0,debug = "",fruitName="",fruitColor=""
 
+    // ดึงข้อมูลทั้งหมด
     async function load(){
         const res = await fetch("http://localhost:4000/api/fruits")
         fruits = await res.json()
