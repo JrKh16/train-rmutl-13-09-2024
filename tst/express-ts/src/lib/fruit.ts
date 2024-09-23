@@ -8,8 +8,8 @@ PATCH /api/fruits/1 (Update fruit) U
 DELETE /api/fruits/1 (Delete a fruit) D filter
 */
 let _fruit=[
-    {id:1,name:"Apple",color:"green"},
-    {id:2,name:"Apple",color:"red"},
+    {id:1,name:"Apple",color:"green",price:100},
+    {id:2,name:"Apple",color:"red",price:100},
 ]
 
 fruitRoute.get('/', (req, res) => {
@@ -25,8 +25,9 @@ fruitRoute.post('/', (req, res) => {
     const id = Date.now()
     const name = Date.now()
     const color = Date.now()
+    const price = Date.now()
     console.log(req.body)
-    const afruit = {id,name,color,...req.body}
+    const afruit = {id,name,color,price,...req.body}
     _fruit.push(afruit)
     res.status(201).json(afruit);
 });
