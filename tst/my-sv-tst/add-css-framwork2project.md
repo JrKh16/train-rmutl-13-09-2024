@@ -9,34 +9,34 @@ npm i -D daisyui@latest <br>
 
 และใน tailwind.config.js <br>
 เพิ่ม plugins <br>
-module.exports = {
-  //...
-  plugins: [
-    require('daisyui'),
-  ],
-}
+module.exports = { <br>
+  //... <br>
+  plugins: [ <br>
+    require('daisyui'), <br>
+  ], <br>
+} <br>
  <br>
 สร้างไฟล์ app.css <br>
 ----
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base; <br>
+@tailwind components; <br>
+@tailwind utilities; <br>
 ---
 
 และสร้างไฟล์ +layout.svelte <br>
-<script>
-	import '../app.css';
-</script>
+<script> <br>
+	import '../app.css'; <br>
+</script> <br>
 
-<slot />
- <br>
+<slot /> <br>
+ <br> <br>
 หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
-module.exports = {
+module.exports = { <br>
   //...
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
-}
+  daisyui: { <br>
+    themes: ["light", "dark", "cupcake"], <br>
+  }, <br>
+} <br>
  <br>
 เรียกใช้ในไฟล์ +page.svelte  <br>
 <html data-theme="cupcake"></html>
