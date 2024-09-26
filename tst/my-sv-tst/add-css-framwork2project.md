@@ -23,7 +23,7 @@ module.exports = { <br>
 @tailwind utilities; <br>
 ---
 
-<h2>และสร้างไฟล์ +layout.svelte<h2>
+<h2>และสร้างไฟล์ +layout.svelte</h2>
 ---
 <script> <br>
 	import '../app.css'; <br>
