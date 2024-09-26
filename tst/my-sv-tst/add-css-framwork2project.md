@@ -1,42 +1,44 @@
 # เพื่อใช้งาน daisyui component library for Tailwind CSS
 
 <h2>ขั้นตอนแรก ติดตั้งใน project ของคุณ</h2>
-npm install -D tailwindcss
-npx tailwindcss init
+npm install -D tailwindcss <br>
+npx tailwindcss init <br>
 
-แล้วก็ติดตั้ง daisyui 
-npm i -D daisyui@latest
+แล้วก็ติดตั้ง daisyui  <br>
+npm i -D daisyui@latest <br>
 
-และใน tailwind.config.js
-เพิ่ม plugins
+และใน tailwind.config.js <br>
+เพิ่ม plugins <br>
 module.exports = {
   //...
   plugins: [
     require('daisyui'),
   ],
 }
-
-สร้างไฟล์ app.css
+ <br>
+สร้างไฟล์ app.css <br>
 ----
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ---
 
-และสร้างไฟล์ +layout.svelte
+และสร้างไฟล์ +layout.svelte <br>
 <script>
 	import '../app.css';
 </script>
 
 <slot />
-
-หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js
+ <br>
+หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
 module.exports = {
   //...
   daisyui: {
     themes: ["light", "dark", "cupcake"],
   },
 }
-
-เรียกใช้ในไฟล์ +page.svelte 
+ <br>
+เรียกใช้ในไฟล์ +page.svelte  <br>
 <html data-theme="cupcake"></html>
+
+https://daisyui.com/docs/install/
