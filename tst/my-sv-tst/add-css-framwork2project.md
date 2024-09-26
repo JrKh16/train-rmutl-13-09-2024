@@ -28,7 +28,6 @@ module.exports = { <br>
 <script> <br>
 	import '../app.css'; <br>
 </script>
-
 <slot />
 ----
 หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
