@@ -17,11 +17,10 @@ module.exports = { <br>
 } <br>
  <br>
 สร้างไฟล์ app.css
-----
+---
 @tailwind base; <br>
 @tailwind components; <br>
 @tailwind utilities; <br>
----
 
 <h2>และสร้างไฟล์ +layout.svelte</h2>
 ---
@@ -30,6 +29,7 @@ module.exports = { <br>
 </script>
 <slot />
 ----
+<br>
 หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
 module.exports = { <br>
   //...
@@ -38,7 +38,7 @@ module.exports = { <br>
   }, <br>
 } <br>
  <br>
-เรียกใช้ในไฟล์ +page.svelte  <br>
+เรียกใช้ในไฟล์ +page.svelte 
 <html data-theme="cupcake"></html>
 
 https://daisyui.com/docs/install/
