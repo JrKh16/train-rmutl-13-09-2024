@@ -18,18 +18,18 @@ module.exports = { <br>
  <br>
 สร้างไฟล์ app.css <br>
 ----
-@tailwind base; <br>
-@tailwind components; <br>
-@tailwind utilities; <br>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ---
 
-และสร้างไฟล์ +layout.svelte <br>
+และสร้างไฟล์ +layout.svelte
 <script> <br>
 	import '../app.css'; <br>
 </script> <br>
 
 <slot /> <br>
- <br> <br>
+
 หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
 module.exports = { <br>
   //...
