@@ -1,44 +1,57 @@
-# เพื่อใช้งาน daisyui component library for Tailwind CSS
+# การใช้งาน daisyUI Component Library สำหรับ Tailwind CSS
 
-<h2>ขั้นตอนแรก ติดตั้งใน project ของคุณ</h2>
-npm install -D tailwindcss <br>
-npx tailwindcss init <br>
+## ขั้นตอนแรก: ติดตั้งในโปรเจกต์ของคุณ
 
-แล้วก็ติดตั้ง daisyui  <br>
-npm i -D daisyui@latest <br>
+เริ่มจากติดตั้ง `tailwindcss`:
 
-และใน tailwind.config.js <br>
-เพิ่ม plugins <br>
-module.exports = { <br>
-  //... <br>
-  plugins: [ <br>
-    require('daisyui'), <br>
-  ], <br>
-} <br>
- <br>
-สร้างไฟล์ app.css
----
-@tailwind base; <br>
-@tailwind components; <br>
-@tailwind utilities; <br>
+```bash
 
-<h2>และสร้างไฟล์ +layout.svelte</h2>
----
-<script> <br>
-	import '../app.css'; <br>
-</script>
-<slot />
-----
-<br>
-หากต้องการเปลี่ยนสีธีมให้เพิ่ม them list in tailwind.config.js <br>
-module.exports = { <br>
+npm install -D tailwindcss
+npx tailwindcss init
+
+
+จากนั้นติดตั้ง daisyUI:
+npm i -D daisyui@latest
+
+
+และในไฟล์ tailwind.config.js ให้เพิ่ม plugins ดังนี้:
+module.exports = {
   //...
-  daisyui: { <br>
-    themes: ["light", "dark", "cupcake"], <br>
-  }, <br>
-} <br>
- <br>
-เรียกใช้ในไฟล์ +page.svelte 
+  plugins: [
+    require('daisyui'),
+  ],
+}
+
+
+สร้างไฟล์ app.css
+ภายในไฟล์ app.css ให้เพิ่มเนื้อหาดังนี้:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+สร้างไฟล์ +layout.svelte
+ในไฟล์ +layout.svelte ให้นำเข้า app.css และใช้ slot ดังนี้:
+<script>
+	import '../app.css';
+</script>
+
+<slot />
+
+
+การเปลี่ยนสีธีม
+หากต้องการเปลี่ยนสีธีม คุณสามารถเพิ่ม themes ในไฟล์ tailwind.config.js:
+module.exports = {
+  //...
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
+}
+
+
+การเรียกใช้ในไฟล์ +page.svelte
+ในไฟล์ +page.svelte คุณสามารถตั้งค่า theme ที่ต้องการได้ เช่น:
 <html data-theme="cupcake"></html>
 
-https://daisyui.com/docs/install/
+
+สำหรับข้อมูลเพิ่มเติมสามารถดูที่ daisyUI Documentation
