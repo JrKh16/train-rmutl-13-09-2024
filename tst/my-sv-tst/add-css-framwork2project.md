@@ -18,15 +18,15 @@ module.exports = { <br>
  <br>
 สร้างไฟล์ app.css <br>
 ----
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base; <br>
+@tailwind components; <br>
+@tailwind utilities; <br>
 ---
 
 และสร้างไฟล์ +layout.svelte
 <script> <br>
 	import '../app.css'; <br>
-</script> <br>
+</script>
 
 <slot /> <br>
 
