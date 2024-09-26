@@ -1,10 +1,10 @@
 import {Get, Route} from "tsoa";  
-  @Route("hello")
-  export class HelloController {
+  @Route("furits")
+  export class furitsController {
     @Get()
     public async getMessage(){
       return {
-        message: "hello"+" PP"
+        message: "furits"+" PP"
       };
     }
   }

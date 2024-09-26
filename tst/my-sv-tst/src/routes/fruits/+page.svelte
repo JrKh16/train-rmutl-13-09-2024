@@ -1,5 +1,7 @@
+<html data-theme="nord"></html>
 <script lang="ts">
-    import { onMount } from 'svelte';    
+    import { onMount } from 'svelte';   
+    // type 
     let fruits: {id:number,name:string,color:string,price:string}[]=[]
     // ตัวแปรของ fruits
     let selectedId=0,debug = "",fruitName="",fruitColor="",fruitPrice=""
@@ -45,14 +47,15 @@
             debug = id+" not found "+id
         }
     }
+    // ตอนเปิด ขึ้นมาแล้วจะให้ทำอะไร
     onMount(async () => {load()});
     </script>
     <input type="text" name="name" bind:value={fruitName} placeholder="name">
     <input type="text" name="color" bind:value={fruitColor} placeholder="color">
     <input type="text" name="price" bind:value={fruitPrice} placeholder="price">
-    <button on:click={create} disabled={!fruitName||!fruitColor||!fruitPrice}>Create</button> 
-    <button on:click={update} disabled={!fruitName||!fruitColor||!fruitPrice||selectedId===0}>Update</button>
-    <button on:click={remove} disabled={selectedId===0}>Delete</button>
+    <button class="btn btn-success" on:click={create} disabled={!fruitName||!fruitColor||!fruitPrice}>Create</button> 
+    <button class="btn btn-warning" on:click={update} disabled={!fruitName||!fruitColor||!fruitPrice||selectedId===0}>Update</button>
+    <button class="btn btn-error" on:click={remove} disabled={selectedId===0}>Delete</button>
     <ul>
     {#each fruits as fruit}
         <li>

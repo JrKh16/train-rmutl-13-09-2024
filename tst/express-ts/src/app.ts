@@ -39,4 +39,23 @@ app.use(
 //   res.sendFile(`${process.cwd()}/static/index.html`)
 // })
 
-app.listen(port, () => console.log(`Application is running on port http://localhost/${port}`))
+
+app.use(express.static('static'))
+app.get('*',(req,res,next)=>{
+  res.sendFile(`${process.cwd()}/static/index.html`)
+})
+
+
+app.use(Router)
+app.use(
+  "/swagger",
+  swaggerUi.serve,
+  swaggerUi.setup(undefined, {
+    swaggerOptions: {
+      url: "/swagger.json",
+    },
+  })
+)
+
+
+app.listen(port, () => console.log(`Application is running on port http://localhost:${port}`))
