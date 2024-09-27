@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  web:
+    image: nginx
+    volumes:
+    # ถ้าใช้ html จะใช้เป็นroot ต้องเปลี่ยนชื่อไฟล์
+     - ./html2:/usr/share/nginx/html:ro
+    ports:
+     - "9083:80"
+    restart: unless-stopped
