@@ -3,7 +3,7 @@ import cors from "cors"
 import express, { Express, Request, Response,NextFunction } from 'express'
 import {myapiRoute} from './lib/myapi'
 import {fruitRoute} from "./lib/fruit"
-import Router from "./routes"
+import Router from "./myRoutes"
 import swaggerUi from "swagger-ui-express"
 const app: Express = express()
 const port = Number(process.env.PORT) || 80

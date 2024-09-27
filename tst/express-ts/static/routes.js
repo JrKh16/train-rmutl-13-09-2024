@@ -27,7 +27,7 @@ const routerInstance = new Router('routerInstance', [
     {
         path: '/fruit',
         name: "fruits",
-        content:`<a href="http://localhost:3000/fruits" target="_blank" >click it</a>`
+        content:`<a href="http://localhost:3000/fruits" >click it</a>`
     }
 
 ])
